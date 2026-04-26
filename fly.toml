@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for matvei-portfolio-bot on 2026-04-25T09:11:52+03:00
+# fly.toml app configuration file generated for matvii-portfolio-bot on 2026-04-25T09:11:52+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = 'matvei-portfolio-bot'
+app = 'matvii-portfolio-bot'
 primary_region = 'fra'
 
 [build]

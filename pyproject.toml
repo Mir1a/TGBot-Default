@@ -1,7 +1,7 @@
 [project]
-name = "matvey-portfolio-bot"
+name = "matvii-portfolio-bot"
 version = "0.1.0"
-description = "Telegram portfolio bot for Matvey Bliznyuk - Python developer"
+description = "Telegram portfolio bot for Matvii Blyzniuk - Python developer"
 requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115.0",

@@ -29,7 +29,7 @@ TEXTS: dict[str, dict[str, str]] = {
     "en": {
         "welcome": (
             "Hello\\! 👋\n\n"
-            "I'm Matviy's portfolio bot, a Python developer\\.\n\n"
+            "I'm Matvii's portfolio bot, a Python developer\\.\n\n"
             "Choose a section using the buttons below:"
         ),
         "about_bot": (
@@ -40,7 +40,7 @@ TEXTS: dict[str, dict[str, str]] = {
         ),
         "about_me": (
             "👤 *About my creator*\n\n"
-            "My name is *Matviy*, I've been working as a Python developer since 2023\\.\n\n"
+            "My name is *Matvii*, I've been working as a Python developer since 2023\\.\n\n"
             "I write in Python\\. I love learning new things and trying myself in different areas\\.\n\n"
             "This Telegram bot is one of my projects\\."
         ),
