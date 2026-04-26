@@ -4,9 +4,11 @@ from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_asyn
 
 from app.db.models import Base
 
-os.makedirs("data", exist_ok=True)
+DB_PATH = "/app/data/users.db"
 
-engine = create_async_engine("sqlite+aiosqlite:///./data/users.db", echo=False)
+os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
+
+engine = create_async_engine(f"sqlite+aiosqlite:///{DB_PATH}", echo=False)
 AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False)
 
 
