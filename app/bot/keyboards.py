@@ -1,15 +1,28 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup
 
-from app.bot import Btn
+from app.bot import BUTTONS
 
 
-def main_keyboard() -> ReplyKeyboardMarkup:
+def get_main_keyboard(lang: str) -> ReplyKeyboardMarkup:
+    btn = BUTTONS.get(lang, BUTTONS["uk"])
     return ReplyKeyboardMarkup(
         [
-            [Btn.ABOUT_BOT, Btn.ABOUT_ME],
-            [Btn.CONTACTS, Btn.STACK],
+            [btn["about_bot"], btn["about_me"]],
+            [btn["contacts"], btn["stack"]],
+            [btn["language"]],
         ],
         resize_keyboard=True,
+    )
+
+
+def get_language_keyboard() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("🇺🇦 Українська", callback_data="lang_uk"),
+                InlineKeyboardButton("🇬🇧 English", callback_data="lang_en"),
+            ]
+        ]
     )
 
 

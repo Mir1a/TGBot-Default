@@ -1,6 +1,6 @@
 .PHONY: requirements install run \
         docker-up docker-up-detached docker-down \
-        flake8 mypy black
+        flake8 mypy black update-requirements
 
 requirements:
 	uv export --no-hashes --no-emit-project -o requirements.txt
@@ -9,13 +9,7 @@ install:
 	uv sync
 
 run:
-	uv run uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
-
-docker-up:
 	docker compose up --build
-
-docker-up-detached:
-	docker compose up -d --build
 
 docker-down:
 	docker compose down
@@ -28,3 +22,6 @@ mypy:
 
 black:
 	uv run black app/
+
+update-requirements:  ## Regenerate requirements.txt from pyproject.toml
+	uv export --no-hashes --no-emit-project -o requirements.txt

@@ -23,3 +23,19 @@ uv.lock
 # OS
 .DS_Store
 Thumbs.db
+
+# Type checker cache
+.mypy_cache/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/
+
+# Claude / Superpowers
+.claude/
+docs/superpowers/
+
+# CI/CD
+.github/

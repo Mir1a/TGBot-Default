@@ -1,7 +1,48 @@
+# Environment
 .env
+.env.example
+
+# Git
 .git
+.gitignore
+.github
+
+# Python
 __pycache__
 *.pyc
 *.pyo
 .venv
+venv
+*.egg-info
+dist
+build
+
+# uv
 uv.lock
+
+# Type checker cache
+.mypy_cache
+
+# Database (local dev only)
+*.db
+*.sqlite
+*.sqlite3
+
+# IDE / OS
+.idea
+.vscode
+.DS_Store
+Thumbs.db
+
+# Claude / Superpowers
+.claude
+docs
+
+# Deployment config (not needed inside container)
+fly.toml
+docker-compose.yml
+Makefile
+
+# Docs / misc
+README.md
+tree.txt
